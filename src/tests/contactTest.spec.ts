@@ -1,9 +1,11 @@
 import { test } from "@playwright/test";
-import LoginPage from "../pages/LoginPage";
+import LoginPage from "../pages/loginPage";
 import { decrypt } from "../utils/CryptojsUtil";
 import logger from "../utils/LoggerUtil";
 import cdata from "../testdata/datademo.json";
-import { convertCsvFileToJsonFile } from "../utils/CsvtoJsonUtil";
+import { convertCsvFileToJsonFile } from "../utils/CSVtoJSONUtil";
+import { exportToCsv, exportToJson, generateTestData } from "../utils/FakerDataUtil";
+import { demoOutput } from "../utils/fakersample";
 
 for (const contact of cdata) {
   test(`Advance DD test for ${contact.firstName} `, async ({ page }) => {
@@ -43,8 +45,26 @@ test.skip("simple DD test", async ({ page }) => {
   logger.info("Test for Contact Creation is completed");
 });
 
-test("csv to json", async () => {
+test.skip("csv to json", async () => {
   convertCsvFileToJsonFile("data.csv", "datademo.json");
 });
 
 
+test.skip("demo faker", async () => { 
+
+  console.log(demoOutput)
+
+ });
+
+test("Faker", async ({ page }) => { 
+
+  // Generate test data
+const testData = generateTestData(20);
+
+// Export data to JSON file
+exportToJson(testData, 'testData_en.json');
+
+// Export data to CSV file
+exportToCsv(testData, 'testData_en.csv');
+
+ });

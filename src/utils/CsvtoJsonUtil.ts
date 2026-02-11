@@ -16,8 +16,6 @@ const CSVToJSON = (data: string, delimiter: string = ","): Record<string, string
   };
 
 
-
-//   console.log(CSVToJSON('col1,col2\na,b\nc,d'));
 // Example usage
 const currentDir = __dirname;
 // Go one level above (back to 'src')
