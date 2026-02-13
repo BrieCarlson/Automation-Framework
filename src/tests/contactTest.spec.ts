@@ -1,5 +1,5 @@
 import { test } from "@playwright/test";
-import LoginPage from "../pages/loginPage";
+import LoginPage from "../pages/LoginPage";
 import { decrypt } from "../utils/CryptojsUtil";
 import logger from "../utils/LoggerUtil";
 import cdata from "../testdata/datademo.json";
