@@ -19,7 +19,7 @@ const generateUserData = (): UserData => {
   return {
     name: faker.person.firstName(),
     email: faker.internet.email(),
-    username: faker.internet.username(),
+    username: faker.internet.userName(),
     phone: faker.phone.number(),
     age: faker.number.int({ min: 18, max: 99 }),
     address: faker.location.country(),

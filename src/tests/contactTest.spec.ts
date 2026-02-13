@@ -1,11 +1,11 @@
 import { test } from "@playwright/test";
-import LoginPage from "../pages/LoginPage";
 import { decrypt } from "../utils/CryptojsUtil";
 import logger from "../utils/LoggerUtil";
 import cdata from "../testdata/datademo.json";
-import { convertCsvFileToJsonFile } from "../utils/CSVtoJSONUtil";
+import { convertCsvFileToJsonFile } from "../utils/CsvtoJsonUtil";
 import { exportToCsv, exportToJson, generateTestData } from "../utils/FakerDataUtil";
 import { demoOutput } from "../utils/fakersample";
+import LoginPage from "../pages/LoginPage";
 
 for (const contact of cdata) {
   test(`Advance DD test for ${contact.firstName} `, async ({ page }) => {
