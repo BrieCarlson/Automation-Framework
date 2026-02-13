@@ -1,0 +1,14 @@
+2026-02-14T03:54:24+05:30 [error]: Error clicking login button: Error: locator.click: Test timeout of 3000ms exceeded.
+Call log:
+[2m  - waiting for locator('#Login')[22m
+
+2026-02-14T03:54:28+05:30 [error]: Error clicking login button: Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+Locator: getByTitle('Service')
+Expected: visible
+Error: element(s) not found
+
+Call log:
+[2m  - Expect "toBeVisible" with timeout 30000ms[22m
+[2m  - waiting for getByTitle('Service')[22m
+
